@@ -10,5 +10,21 @@ describe Player do
       input = { color: 'X', name: 'chayya' }
       # expect { Player.new(input) }.to_not raise_error
     end
+
+    context '#color' do
+      it 'returns the color' do
+        input = { color: 'X', name: 'avi' }
+        player = Player.new(input)
+        expect(player.color).to eq 'X'
+      end
+    end
+
+    context '#name' do
+      it 'returns the name of the player' do
+        input = { color: 'X', name: 'avi' }
+        player = Player.new(input)
+        expect(player.name).to eq 'avi'
+      end
+    end
   end
 end
